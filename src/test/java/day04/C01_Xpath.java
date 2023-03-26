@@ -69,6 +69,7 @@ public class C01_Xpath {
 //        List<WebElement> resimler = driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
 //        resimler.get(8).click();
         WebElement resimler = driver.findElement(By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[3]"));
+        resimler.click();
 
     }
 }

@@ -26,12 +26,21 @@ public class C02_cssSelector {
         Thread.sleep(3000);
 //        Delete butonu’nun gorunur oldugunu test edin Delete tusuna basin
         WebElement delete = driver.findElement(By.cssSelector("button[onclick='deleteElement()']"));
-        System.out.println(delete.isDisplayed());
+        System.out.println("delete: "+delete.isDisplayed());
         delete.click();
 
 
 //“Add/Remove Elements” yazisinin gorunur oldugunu test edin
-        System.out.println(button.isDisplayed());
-        button.click();
+       // #content > h3
+        WebElement yazi =driver.findElement(By.cssSelector("h3"));//eger xpath ile olsaydi //h3
+        System.out.println("Add/Remove Elements: "+yazi.isDisplayed());
+
+        /*
+         Xpath ve cssSelector arasindaki farklar;
+         1)Xpath metin ile calisabilir, cssSelector calisamaz.
+         2)Xpath daha fazla kombinasyona sahiptir ve index'e gore arama yapabilir.
+         3)cssSelector index'e gore arama yapamaz ancak daha hizli calisir.
+ */
+
     }
 }
